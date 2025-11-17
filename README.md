@@ -19,6 +19,16 @@ This project implements an **unsupervised anomaly detection system** for network
 -  **Comprehensive Evaluation**: ROC curves, confusion matrix, error analysis
 -  **Production-Ready**: Modular code, configurable parameters, scalable design
 
+### The dataset can be dowloaded as follows:
+```
+    dataset_name = "UNSW-NB15"
+    subset = ['Network-Flows', 'Packet-Fields', 'Payload-Bytes']  
+    files = [3, 5, 10] # files that I used
+    from nids_datasets import Dataset, DatasetInfo
+    data = Dataset(dataset=dataset_name, subset=subset, files=files)
+
+    data.download() 
+```
 ## Architecture
 
 ### Deep Autoencoder
