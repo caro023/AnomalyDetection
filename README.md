@@ -14,10 +14,7 @@ This project implements an **unsupervised anomaly detection system** for network
 
 -  **Semi-supervised Learning**: Realistic training with 5% attack contamination
 -  **Deep Autoencoder Architecture**: 33 → 256 → 128 → 64 → 16 (latent) → 64 → 128 → 256 → 33
--  **High Performance**: ROC-AUC 0.96+, Detection Rate 98%+
--  **Low False Positives**: ~10% false alarm rate
 -  **Comprehensive Evaluation**: ROC curves, confusion matrix, error analysis
--  **Production-Ready**: Modular code, configurable parameters, scalable design
 
 ### The dataset can be dowloaded as follows:
 ```
@@ -53,7 +50,6 @@ Decoder:
 - **ReLU Activation**: Efficient non-linearity
 - **MSE Loss**: Measures reconstruction quality
 
-
 ## Configuration Options
 
 ### Training Parameters
@@ -61,8 +57,8 @@ Decoder:
 | Parameter | Default | Description |
 |-----------|---------|-------------|
 | `use_subset` | True | Use subset for faster training |
-| `subset_size` | 50000 | Number of samples if subset enabled |
-| `contamination_rate` | 0.05 | Attack percentage in training (0.0-0.2) |
+| `subset_size` | 50000 | Number of samples |
+| `contamination_rate` | 0.05 | Attack percentage in training |
 | `epochs` | 30 | Training epochs (auto-adjusted) |
 | `batch_size` | 256 | Batch size for training |
 | `learning_rate` | 0.001 | Adam optimizer learning rate |
